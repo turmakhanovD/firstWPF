@@ -1,0 +1,45 @@
+﻿<Window x:Class="FirstWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstWPF"
+        mc:Ignorable="d"
+        Title="User card" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid OpacityMask="White" Margin="0,0,2,-85">
+
+        <materialDesign:Card Padding="32" Margin="22,125,10,0" Background="#FFFDFDFF" Height="90">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="Name:                        Surname:"/><LineBreak/><Run/></TextBlock>
+        </materialDesign:Card>
+
+        <materialDesign:Card Padding="32" Margin="22,28,10,0" Height="92">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="&#x9;&#x9;&#x9;     Student card"/>
+        </materialDesign:Card>
+
+        <materialDesign:Card Padding="32" Margin="22,220,10,0" Background="#FFFDFDFF" Height="88">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="Group:                        Age:"/>
+        </materialDesign:Card>
+        <Label x:Name="nameLabel" Content=" " HorizontalAlignment="Left" Margin="130,158,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name="groupLabel" Content=" " HorizontalAlignment="Left" Margin="130,253,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name="surnameLabel" Content=" " HorizontalAlignment="Left" Margin="350,158,0,0" VerticalAlignment="Top" Width="195"/>
+        <Label x:Name="ageLabel" Content=" " HorizontalAlignment="Left" Margin="350,250,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="195">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.937"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
+    </Grid>
+</Window>
